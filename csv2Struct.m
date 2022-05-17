@@ -31,10 +31,9 @@ function [ SENSORS_RAWDATA_STURCT ] = csv2Struct( csv_file_path, SENSOR_TYPE,DEV
             csvfile = fullfile(csv_file_path, sprintf(CSV_FILE_NAME_FORMAT(SENSOR_NAME{i},csv_file_index))
             for j=1:AXIS_ACCOUNT
                  % 取csv的轴数据
-                SENSORS_RAWDATA_STURCT.SENSOR_NAME{AXIS_NAME(i)}.(j)=cvsfile(j, :);
+                SENSORS_RAWDATA_STURCT.SENSOR_NAME{SENSOR_NAME(i)}.AXIS_NAME(j)=cvsfile(j, :);
             end
         end
-        SENSORS_RAWDATA_STURCT = aligndata(SENSORS_RAWDATA_STURCT);
      end
  end
 
