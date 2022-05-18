@@ -13,11 +13,11 @@ function [ SENSOR_RAWDATA_STURCT ] = loadImudata( csv_file_folder_path,DEVICE_NA
 %   Variables:
 %   ----------
 %
-%   csv_file_folder_path   =   path to the folder where the csv_file is located
+%   csv_file_folder_path  =  path to the folder where the csv_file is located
 %
-%   DEVICE_NAME            =   type of mobile device,'jeep,Zen,KC08'
+%   DEVICE_NAME           =  type of mobile device,'jeep,Zen,KC08'
 %
-%   csv_file_index         =   serial number of csv_file
+%   csv_file_index        =  serial number of csv_file
 %
 %   Tree organization of IMU data：
 %   ----------
@@ -48,7 +48,7 @@ function [ SENSOR_RAWDATA_STURCT ] = loadImudata( csv_file_folder_path,DEVICE_NA
     SENSOR_ACCOUNT = size(SENSOR_NAME,1);
     AXIS_NAME =['X';'Y';'Z'];
     AXIS_ACCOUNT = size(AXIS_NAME,1);
-    for i = 1:SENSOR_ACCOUNT                     %sprintf(CSV_FILE_NAME_FORMAT.ACCELEROMER, csv_file_index)
+    for i = 1:SENSOR_ACCOUNT                  
         format_id = SENSOR_NAME{i};
         nameformat=CSV_FILE_NAME_FORMAT.(format_id);
         csvfile = fullfile(csv_file_folder_path, sprintf(nameformat, csv_file_index) );  
