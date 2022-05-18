@@ -23,7 +23,7 @@ function [ SENSOR_RAWDATA_STURCT ] = loadImudata( csv_file_folder_path,DEVICE_NA
 %   ----------
 %                         | ACCELEROMETER | X,Y,Z
 %   SENSORS_RAWDATA_STURCT|
-%                         | GYROSCOPE   | X,Y,Z
+%                         | GYROSCOPE     | X,Y,Z
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
