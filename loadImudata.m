@@ -21,7 +21,7 @@ function [ SENSOR_RAWDATA_STURCT ] = loadImudata( csv_file_folder_path,DEVICE_NA
 %
 %   Tree organization of IMU data：
 %   ----------
-%                         | ACCELEROMER | X,Y,Z
+%                         | ACCELEROMETER | X,Y,Z
 %   SENSORS_RAWDATA_STURCT|
 %                         | GYROSCOPE   | X,Y,Z
 %
@@ -32,13 +32,13 @@ function [ SENSOR_RAWDATA_STURCT ] = loadImudata( csv_file_folder_path,DEVICE_NA
 %   Determine the path of the csv_file。   
     CSV_FILE_NAME_FORMAT = struct();
     if strcmp(DEVICE_NAME,'watch_kc08')
-        CSV_FILE_NAME_FORMAT.ACCELEROMER = 'ACCELEROMETER-%04d.csv';
+        CSV_FILE_NAME_FORMAT.ACCELEROMETER = 'ACCELEROMETER-%04d.csv';
         CSV_FILE_NAME_FORMAT.GYROSCOPE = 'GYROSCOPE-%04d.csv';
     elseif strcmp(DEVICE_NAME,'watch_jeep')
-        CSV_FILE_NAME_FORMAT.ACCELEROMER = 'BMI160accelerometer-%04d.csv';
+        CSV_FILE_NAME_FORMAT.ACCELEROMETER = 'BMI160accelerometer-%04d.csv';
         CSV_FILE_NAME_FORMAT.GYROSCOPE = 'BMI160gyroscope-%04d.csv';
     elseif strcmp(DEVICE_NAME,'watch_zen')
-        CSV_FILE_NAME_FORMAT.ACCELEROMER = 'Accelerometer-%04d.csv';
+        CSV_FILE_NAME_FORMAT.ACCELEROMETER = 'Accelerometer-%04d.csv';
         CSV_FILE_NAME_FORMAT.GYROSCOPE = 'Gyroscope-%04d.csv';
     end
     
@@ -57,3 +57,5 @@ function [ SENSOR_RAWDATA_STURCT ] = loadImudata( csv_file_folder_path,DEVICE_NA
         end
     end
 end
+
+
