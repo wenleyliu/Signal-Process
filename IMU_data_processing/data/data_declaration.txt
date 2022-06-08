@@ -1,5 +1,0 @@
-user_name = lwl
-sampling_rate = 400
-sampling_date = 20200407
-watch_type = jeep
-
