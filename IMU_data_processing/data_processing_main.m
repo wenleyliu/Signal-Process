@@ -31,10 +31,10 @@ watch_type = args.watch_type;
 function [value] = config_loading(filepath)
     value = [];
     filename = [filepath, 'data_declaration.txt'];
-    fid = fopen(filename); % ´ò¿ªÎÄ¼ş    
-    while ~feof(fid)  % Ñ­»·Ö±ÖÁÎÄ¼şÄ©
-        line = fgetl(fid);   % ¶ÁÈ¡Ä³Ò»ĞĞ
-        dict = strsplit(line, '=');   % = ×÷Îª·Ö¸ô·û
+    fid = fopen(filename); % æ‰“å¼€æ–‡ä»¶    
+    while ~feof(fid)  % å¾ªç¯ç›´è‡³æ–‡ä»¶æœ«
+        line = fgetl(fid);   % è¯»å–æŸä¸€è¡Œ
+        dict = strsplit(line, '=');   % = ä½œä¸ºåˆ†éš”ç¬¦
     
         if length(dict) == 2
             key = char(strtrim(string(dict(1))));
